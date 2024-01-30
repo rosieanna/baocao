@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Em pai</title>
+</head>
+<body>
+    <h1 id="title">Em pai beta</h1>
+    <div>
+        <button class="budget">100</button>
+        <input type="text" id="inputId" placeholder="Nhap tien bet">
+    </div>
+    <div class='roulette-wrapper'>
+        <div class='selector'></div>
+        <div class='wheel'></div>
+    </div>
+    <div class="row">
+        <button class="btn rs">Reset</button>
+        <button class="btn pl">Spin</button>
+        <button class="btn ai">All in</button>
+    </div>
+
+    <div class="row">
+        <div class="frame">
+            <div class="layer-1">
+                <button class="gold pic">0</button>
+            </div>
+            <div class="layer-2 minus"></div>
+            <div class="layer-2 plus"></div>
+        </div>
+        <div class="frame">
+            <div class="layer-1">
+                <button class="coin pic">0</button>
+            </div>
+            <div class="layer-2 minus"></div>
+            <div class="layer-2 plus"></div>
+        </div>
+        <div class="frame">
+            <div class="layer-1">
+                <button class="brick pic">0</button>
+            </div>
+            <div class="layer-2 minus"></div>
+            <div class="layer-2 plus"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col">
+            <div class="row">
+                <img src="./images/gold.png" alt="">
+                <p>x2</p>
+            </div>
+            <div class="row">
+                <img src="./images/coin.png" alt="">
+                <p>x14</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <img src="./images/brick.png" alt="">
+                <p>x2</p>
+            </div>
+            <div class="row">
+                <img src="./images/mushroom.png" alt="">
+                <p>x0</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
