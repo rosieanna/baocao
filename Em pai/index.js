@@ -1,3 +1,5 @@
+let isSpinning = false;
+
 window.onload = function() {
   alert("Click bên trái hoặc bên phải bức hình để bet.\nKhông khuyến khích đánh bạc dưới mọi hình thức :))"); 
 };
@@ -46,6 +48,10 @@ $(document).ready(function() {
   let bet = 0;
   let earn = 0;
  	$('.btn.pl').on('click', function(){
+    if (isSpinning) {
+      return;
+    }
+    isSpinning = true;
     profit = 0;
     bet = 0;
     earn = 0;
@@ -108,6 +114,9 @@ $(document).ready(function() {
       $('.gold.pic').text('0');
       $('.coin.pic').text('0');
   }, 6000);
+  setTimeout(() => {
+    isSpinning = false;
+  }, 6000);
   });
 
   $('.btn.rs').on('click', function() {
@@ -133,7 +142,6 @@ $(document).ready(function() {
 function initWheel(){
 	var $wheel = $('.roulette-wrapper .wheel'),
   		row = "";
-      
   row += "<div class='row'>";
   row += "  <div class='card brick'><\/div>";
   row += "  <div class='card gold'><\/div>";
